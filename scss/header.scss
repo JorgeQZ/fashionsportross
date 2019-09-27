@@ -1,0 +1,43 @@
+$font: "Montserrat";
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $font, serif;
+}
+
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: beige;
+    padding: 10px 40px;
+    .brand-logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .main-logo {
+            height: 40px;
+            width: auto;
+        }
+    }
+    .menu-cont {
+        ul {
+            display: flex;
+            padding: 0;
+            margin: 0;
+            align-items: center;
+            justify-content: center;
+            list-style: none;
+            text-transform: uppercase;
+            li {
+                padding: 0px 10px;
+                a {
+                    color: black;
+                    text-decoration: none;
+                    font-style: normal;
+                }
+            }
+        }
+    }
+}
