@@ -1,0 +1,7 @@
+.wp_body {
+  background-image: url("../img/background.jpg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: repeat repeat;
+  background-attachment: fixed;
+}

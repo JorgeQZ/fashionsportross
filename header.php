@@ -9,7 +9,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body>
+<body class="wp_body">
 
     <header class="main-header">
         <a href="" class="brand-logo">
