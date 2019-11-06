@@ -16,13 +16,14 @@
             <img src="<?php echo get_template_directory_uri() . '/img/Logo.png'; ?>" alt="" class="main-logo">
         </a>
 
-        <div class="menu-cont">
-            <ul>
-                <li><a href="">test</a></li>
-                <li><a href="">test</a></li>
-                <li><a href="">test</a></li>
-                <li><a href="">test</a></li>
-            </ul>
-        </div>
+        <?php
+        wp_nav_menu(array(
+            'menu'              => "Header",
+            'container'         => "div",
+            'container_class'   => "menu-cont",
+            'depth'             => "2",
+
+        ));
+        ?>
     </header>
     <div class="wrapper">
