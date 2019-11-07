@@ -4,4 +4,10 @@
   background-size: contain;
   background-repeat: repeat repeat;
   background-attachment: fixed;
+  display: block;
+  color: #3f3f3f;
+}
+
+.wrapper {
+  min-height: calc(100vh - 140px);
 }

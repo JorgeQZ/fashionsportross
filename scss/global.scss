@@ -1,3 +1,5 @@
+$font-color: #de3252;
+$text-color: #3f3f3f;
 .wp_body {
     background-image: url("../img/background.jpg");
     background-position: center;
@@ -5,4 +7,10 @@
     background-repeat: repeat repeat;
     background-attachment: fixed;
     display: block;
+    color: $text-color;
+}
+
+.wrapper{
+    min-height: calc(100vh - 140px);
+   
 }

@@ -1,0 +1,166 @@
+$font-color: #de3252;
+$text-color: #3f3f3f;
+
+.wrapper {
+    .woocommerce {
+
+        max-width: 1280px;
+        padding: 50px 30px;
+        margin: 0 auto;
+
+        .woocommerce-error,
+        .woocommerce-info,
+        .woocommerce-message {
+            border-top: 3px solid $font-color;
+            background-color: #fff;
+
+            &::before {
+                color: $font-color;
+            }
+        }
+
+        .onsale {
+            background-color: $font-color;
+            font-size: 12px;
+            padding: 7px;
+        }
+
+        .single-product {
+            background-color: #fff;
+            padding: 10px;
+        }
+
+        .woocommerce-tabs,
+        .wc-tabs-wrapper,
+        .related.products {
+            background-color: #fff;
+
+            .tabs {
+
+                .description_tab,
+                .additional_information_tab {
+                    color: #fff;
+                    background-color: $font-color;
+
+                    &.active {
+                        a {
+                            color: $font-color;
+
+                            &:hover {
+                                color: $font-color;
+                            }
+                        }
+                    }
+
+                    a {
+                        color: #fff;
+
+                        &:hover {
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+
+        ul.products {
+            li.product {
+                background-color: white;
+
+                text-align: center;
+
+                .woocommerce-LoopProduct-link.woocommerce-loop-product__link {
+                    .attachment-woocommerce_thumbnail.size-woocommerce_thumbnail {
+                        width: 90%;
+                        margin: 0 auto;
+                        margin-top: 10px;
+                    }
+                }
+
+                .woocommerce-loop-product__title {
+                    color: $font-color;
+                    text-align-last: left;
+                    padding: 10px 15px;
+
+                }
+
+
+                .added_to_cart {
+                    padding: 10px;
+                    color: white;
+                    background-color: $font-color;
+                    margin-bottom: 10px;
+                    border-radius: 5px;
+                }
+            }
+        }
+
+        .woocommerce-pagination {
+            .page-numbers {
+                background-color: #fff;
+                border: none;
+
+                li {
+                    border: none;
+                    font-size: 18px;
+
+                    a {
+                        color: #525151;
+                    }
+
+                    .current {
+                        background-color: $font-color;
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        .shop_table,
+        .cart-collaterals {
+            background-color: #fff;
+            padding: 10px;
+
+        }
+
+        .quantity .qty {
+            font-size: 100%;
+            margin: 0;
+            line-height: 1;
+            cursor: pointer;
+            position: relative;
+            text-decoration: none;
+            overflow: visible;
+            padding: .6em 1em;
+            font-weight: 700;
+            border-radius: 3px;
+            left: auto;
+            border: 1px solid $text-color;
+            color: $text-color;
+            background-color: transparent;
+            display: inline-block;
+            background-image: none;
+            box-shadow: none;
+            text-shadow: none;
+        }
+
+        .button {
+            margin-bottom: 10px;
+            border: 1px solid $font-color;
+            background-color: #fff;
+            color: $font-color;
+            transition: all 0.2s;
+
+            &:hover {
+                color: #fff;
+                background-color: $font-color;
+            }
+
+            &.checkout-button,
+            &.button.alt {
+                background-color: $font-color;
+                color: #fff;
+            }
+        }
+    }
+}
