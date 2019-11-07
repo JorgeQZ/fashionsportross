@@ -19,17 +19,27 @@ $text-color: #3f3f3f;
             }
         }
 
+        .product-name{
+            a{
+            color: $font-color;
+            }
+        }
+
         .onsale {
             background-color: $font-color;
             font-size: 12px;
             padding: 7px;
         }
 
+        .price , .woocommerce-Price-amount{
+            color: $text-color;
+        }
+
         .single-product {
             background-color: #fff;
             padding: 10px;
         }
-
+.checkout.woocommerce-checkout{background-color: #fff; padding: 10px;}
         .woocommerce-tabs,
         .wc-tabs-wrapper,
         .related.products {
@@ -84,7 +94,11 @@ $text-color: #3f3f3f;
 
                 }
 
-
+                .price {
+                    padding: 0px 15px;
+                    text-align: left;
+                    color: $text-color;
+                }
                 .added_to_cart {
                     padding: 10px;
                     color: white;
@@ -123,7 +137,7 @@ $text-color: #3f3f3f;
 
         }
 
-        .quantity .qty {
+        .quantity .qty , .input-text{
             font-size: 100%;
             margin: 0;
             line-height: 1;
