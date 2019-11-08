@@ -8,6 +8,21 @@ $text-color: #3f3f3f;
         padding: 50px 30px;
         margin: 0 auto;
 
+        .woocommerce-variation-price {
+            margin-bottom: 10px;
+        }
+
+        .showcoupon, .reset_variations{
+            color: $font-color;
+        }
+
+        .mailchimp-newsletter.woocommerce-validated {
+            background-color: $font-color;
+            ;
+            color: white;
+            padding: 5px;
+        }
+
         .woocommerce-error,
         .woocommerce-info,
         .woocommerce-message {
@@ -19,9 +34,9 @@ $text-color: #3f3f3f;
             }
         }
 
-        .product-name{
-            a{
-            color: $font-color;
+        .product-name {
+            a {
+                color: $font-color;
             }
         }
 
@@ -31,15 +46,67 @@ $text-color: #3f3f3f;
             padding: 7px;
         }
 
-        .price , .woocommerce-Price-amount{
+        .price,
+        .woocommerce-Price-amount,
+        .product .price {
             color: $text-color;
         }
 
-        .single-product {
+        .single-product,
+        .checkout.woocommerce-checkout,
+        .woocommerce-MyAccount-navigation,
+        .woocommerce-MyAccount-content,
+        .woocommerce-form.woocommerce-form-login.login {
             background-color: #fff;
             padding: 10px;
         }
-.checkout.woocommerce-checkout{background-color: #fff; padding: 10px;}
+
+        .woocommerce-LostPassword {
+            a {
+                color: $font-color;
+            }
+        }
+
+        .woocommerce-MyAccount-navigation,
+        .woocommerce-MyAccount-content {
+            padding: 10px 40px;
+
+            a {
+                color: $font-color;
+                text-decoration: none;
+            }
+
+            ul {
+                padding: 0;
+                list-style: none;
+                display: flex;
+                justify-content: space-between;
+
+                li {
+                    padding: 5px 10px;
+                    border: 1px solid white;
+                    transition: all 0.2s;
+                    border-radius: 3px;
+
+                    &.is-active {
+                        background-color: $font-color;
+                        color: white;
+                        border-radius: 3px;
+                        border: 1px solid $font-color;
+
+                        a {
+                            color: white;
+                        }
+
+                    }
+
+                    &:hover {
+                        border: 1px solid $font-color;
+                    }
+                }
+            }
+        }
+
         .woocommerce-tabs,
         .wc-tabs-wrapper,
         .related.products {
@@ -99,6 +166,7 @@ $text-color: #3f3f3f;
                     text-align: left;
                     color: $text-color;
                 }
+
                 .added_to_cart {
                     padding: 10px;
                     color: white;
@@ -137,7 +205,8 @@ $text-color: #3f3f3f;
 
         }
 
-        .quantity .qty , .input-text{
+        .quantity .qty,
+        .input-text {
             font-size: 100%;
             margin: 0;
             line-height: 1;
@@ -174,6 +243,14 @@ $text-color: #3f3f3f;
             &.button.alt {
                 background-color: $font-color;
                 color: #fff;
+            }
+        }
+
+        .posted_in {
+            color: $text-color;
+
+            a {
+                color: $font-color;
             }
         }
     }
