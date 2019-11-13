@@ -25,4 +25,6 @@ function register_theme_styles()
     wp_enqueue_style('woocommerce', get_template_directory_uri() . '/css/woocommerce.css', array(), filemtime(get_template_directory() . '/css/woocommerce.css'), false);
     wp_enqueue_style('montserrat', get_template_directory_uri() . '/fonts/Montserrat.css', array(), filemtime(get_template_directory() . '/fonts/Montserrat.css'), false);
     wp_enqueue_script('jquery');
+    wp_enqueue_script('custom', get_template_directory_uri() . '/js/custom.js', array(), filemtime(get_template_directory() . '/js/custom.js'), false);
+
 }

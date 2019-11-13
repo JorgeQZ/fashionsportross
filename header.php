@@ -26,24 +26,8 @@
         <a href="<?php home_url() ?>" class="brand-logo">
             <img src="<?php echo get_template_directory_uri() . '/img/Logo.png'; ?>" alt="" class="main-logo">
         </a>
-        <div class="container-cuenta">
+        <div class="container-cuenta" id="container-id">
             <div class="contain-account">
-                <div class="column">
-                <?php 
-                    if (is_user_logged_in()) {
-                       ?>
-                       <a href="<?php home_url().'/mi-cuenta'; ?>">Mi cuenta</a>
-                       <?php
-                    }else{
-                       ?>
-                       <a href="<?php home_url().'/mi-cuenta'; ?>">Iniciar Sesión</a>
-                       <?php
-                    }
-                    ?>
-                </div>
-                <div style="padding: 0px 2px;">
-                    |
-                </div>
                 <div class="column">
                     <a class="cart-customlocation" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'Ve tu carrito' ); ?>">
                         Carrito
@@ -55,11 +39,18 @@
             <?php
                 wp_nav_menu(array(
                 'menu'              => "Header",
+                'menu_id'              => "main_menu",
                 'container'         => "div",
                 'container_class'   => "menu-cont",
                 'depth'             => "2",
             ));
             ?>
+        </div>
+
+        <div class="mobile-button" id="mobile-button">
+            <div class="bars"></div>
+            <div class="bars"></div>
+            <div class="bars"></div>
         </div>
     </header>
     <div class="wrapper">

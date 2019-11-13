@@ -23,6 +23,9 @@ body {
             width: auto;
         }
     }
+    .mobile-button {
+        display: none;
+    }
     .container-cuenta {
         position: relative;
         .contain-account {
@@ -35,9 +38,9 @@ body {
             font-size: 13px;
             display: flex;
             justify-content: center;
-            left: calc(50% - 115px);
+            left: calc(50% - 80px);
             padding: 12px 10px;
-            width: 210px;
+            min-width: 110px;
             letter-spacing: -1px;
             border-radius: 0px 0px 8px 8px;
             img {
@@ -80,6 +83,88 @@ body {
                         font-style: normal;
                         font-size: 14px;
                         transition: all 0.3s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .main-header {
+        max-width: 100%;
+        position: relative;
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .main-logo {
+                height: 20px;
+                width: auto;
+            }
+        }
+        .mobile-button {
+            cursor: pointer;
+            width: 30px;
+            height: 20px;
+            padding: 5px 0;
+            background-color: $font-color;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            .bars {
+                flex-direction: row;
+                background-color: #fff;
+                width: 80%;
+                height: 2px;
+                margin: 2px auto;
+            }
+        }
+        .container-cuenta {
+            z-index: 1;
+            position: absolute;
+            left: -100%;
+            width: 100%;
+            top: 100%;
+            opacity: 0;
+            transition: all 0.3s;
+            &.act {
+                opacity: 1;
+                left: 0%;
+                .menu-cont {
+                    ul {
+                        transform: translateX(0px);
+                        opacity: 1;
+                    }
+                }
+                .contain-account {
+                    top: 100%;
+                    opacity: 1;
+                }
+            }
+            .contain-account {
+                top: 0%;
+                opacity: 0;
+                transition-delay: 0.5s;
+                transition-duration: 0.3s;
+            }
+            .menu-cont {
+                position: relative;
+                z-index: 100;
+                transition-delay: 1s;
+                transition-duration: 0.3s;
+                background-color: #fff;
+                ul {
+                    transform: translateX(40px);
+                    transition-delay: .4s;
+                    transition-duration: 0.3s;
+                    display: block;
+                    padding: 10px;
+                    opacity: 0;
+                    li {
+                        margin: 3px 0px;
                     }
                 }
             }
