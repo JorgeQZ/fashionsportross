@@ -21,8 +21,12 @@
 </head>
 
 <body class="wp_body">
-
     <header class="main-header">
+    <div class="contain-search-bar">
+            <?php get_search_form(); ?>
+        </div>
+        <div class="header-content">
+      
         <a href="<?php home_url() ?>" class="brand-logo">
             <img src="<?php echo get_template_directory_uri() . '/img/Logo.png'; ?>" alt="" class="main-logo">
         </a>
@@ -36,6 +40,10 @@
                     </a>
                 </div>
             </div>
+
+            <div class="contain-search" >
+                <img src="<?php echo get_template_directory_uri().'/img/search.png' ?>" alt="" id="search-button">
+            </div>
             <?php
                 wp_nav_menu(array(
                 'menu'              => "Header",
@@ -45,12 +53,14 @@
                 'depth'             => "2",
             ));
             ?>
+
         </div>
 
         <div class="mobile-button" id="mobile-button">
             <div class="bars"></div>
             <div class="bars"></div>
             <div class="bars"></div>
+        </div>
         </div>
     </header>
     <div class="wrapper">
