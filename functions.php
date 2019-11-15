@@ -1,6 +1,11 @@
 <?php
 
 add_theme_support( 'title-tag' );
+function fsr_woocommerce_support() {
+	add_theme_support( 'woocommerce' );
+}
+add_action( 'after_setup_theme', 'fsr_woocommerce_support' );
+
 add_action('after_setup_theme', 'register_custom_nav_menus');
 function register_custom_nav_menus()
 {
