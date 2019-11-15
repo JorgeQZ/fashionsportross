@@ -1,3 +1,77 @@
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    bottom: 80px;
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    bottom: 140px;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    bottom: 80px;
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    bottom: 140px;
+  }
+}
+
+@-webkit-keyframes bounce_out {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    bottom: 140px;
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    bottom: 80px;
+  }
+}
+
+@keyframes bounce_out {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    bottom: 140px;
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    bottom: 80px;
+  }
+}
+
 .wp_body {
   background-image: url("../img/background.jpg");
   background-position: center;
@@ -10,6 +84,7 @@
 
 .wrapper {
   min-height: calc(100vh - 140px);
+  position: relative;
 }
 
 .wrapper .mc4wp-form-basic {
@@ -82,4 +157,43 @@
   font-weight: bold;
   background-color: #fff;
   padding: 10px 20px;
+}
+
+.wrapper .to-up {
+  background-color: #de3252;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  bottom: 80px;
+  right: 30px;
+  cursor: pointer;
+  z-index: 100;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  opacity: 0;
+  border: 2px solid white;
+}
+
+.wrapper .to-up img {
+  width: 20px;
+}
+
+.wrapper .to-up.show {
+  -webkit-animation: bounce 1 .3s forwards;
+          animation: bounce 1 .3s forwards;
+}
+
+.wrapper .to-up.hide {
+  -webkit-animation: bounce_out 1 .3s forwards;
+          animation: bounce_out 1 .3s forwards;
 }

@@ -17,13 +17,14 @@
             add_action( 'wp_head', 'theme_slug_render_title' );
         }
         ?>
-            <?php wp_head(); ?>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <?php wp_head(); ?>
 </head>
 
 <body class="wp_body">
     <header class="main-header">
     <div class="contain-search-bar">
-            <?php get_search_form(); ?>
+            <?php dynamic_sidebar( 'Buscador' );?>
         </div>
         <div class="header-content">
       
@@ -63,4 +64,5 @@
         </div>
         </div>
     </header>
+
     <div class="wrapper">

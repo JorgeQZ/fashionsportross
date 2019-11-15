@@ -28,3 +28,24 @@ function register_theme_styles()
     wp_enqueue_script('custom', get_template_directory_uri() . '/js/custom.js', array(), filemtime(get_template_directory() . '/js/custom.js'), false);
 
 }
+
+add_action( 'after_setup_theme', 'register_multiple_widget_areas' );
+
+function register_multiple_widget_areas()
+{
+    register_sidebar(
+        array(
+        'name'          => 'Carrito',
+        'id'            => 'Carrito',
+        'description'   => 'Widget que se isntala en la tienda de WooCommerce.'
+        )
+    );
+
+    register_sidebar(
+        array(
+        'name'          => 'Buscador',
+        'id'            => 'Buscador',
+        'description'   => 'Añade un buscador de productos.'
+        )
+    );
+}

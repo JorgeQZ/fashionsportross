@@ -8,7 +8,8 @@
   margin-bottom: 10px;
 }
 
-.wrapper .woocommerce .showcoupon, .wrapper .woocommerce .reset_variations {
+.wrapper .woocommerce .showcoupon,
+.wrapper .woocommerce .reset_variations {
   color: #de3252;
 }
 
