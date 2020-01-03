@@ -15,6 +15,32 @@ function register_custom_nav_menus()
     ));
 }
 
+// add_filter('wp_nav_menu_objects', 'my_wp_nav_menu_objects', 10, 2);
+
+// function my_wp_nav_menu_objects( $items, $args ) {
+	
+// 	// loop
+// 	foreach( $items as &$item ) {
+		
+// 		// vars
+// 		$icon = get_field('titulo', $item);
+		
+		
+// 		// append icon
+// 		if( $icon ) {
+			
+// 			$item->title .= ' <i class="fa fa-'.$icon.'"></i>';
+			
+// 		}
+		
+// 	}
+	
+	
+// 	// return
+// 	return $items;
+	
+// }
+
 
 // Register style sheet.
 add_action('wp_enqueue_scripts', 'register_theme_styles');

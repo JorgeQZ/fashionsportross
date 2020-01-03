@@ -1,6 +1,10 @@
     $font: "Montserrat";
     $font-color: #de3252;
     $text-color: #3f3f3f;
+    * {
+        box-sizing: border-box;
+    }
+    
     html,
     body {
         margin: 0;
@@ -18,7 +22,7 @@
             height: 0;
             background-color: #fff;
             overflow: hidden;
-            width: calc(100% - 40px);
+            width: 100%;
             transition: all 0.3s;
             z-index: 100;
             border-top: 1px solid $font-color;
@@ -112,7 +116,6 @@
                 display: none;
             }
             .container-cuenta {
-                position: relative;
                 display: -webkit-box;
                 display: -ms-flexbox;
                 display: flex;
@@ -123,7 +126,7 @@
                 .contain-account {
                     position: absolute;
                     text-transform: uppercase;
-                    top: calc(100% + 10px);
+                    top: calc(100%);
                     z-index: 10;
                     background-color: #3f3f3f;
                     color: white;
@@ -134,7 +137,7 @@
                     -webkit-box-pack: center;
                     -ms-flex-pack: center;
                     justify-content: center;
-                    left: calc(50% - 80px);
+                    left: calc(100% - 200px);
                     padding: 12px 10px;
                     min-width: 110px;
                     letter-spacing: -1px;
@@ -152,7 +155,7 @@
                     }
                 }
                 .menu-cont {
-                    ul {
+                    >ul {
                         display: -webkit-box;
                         display: -ms-flexbox;
                         display: flex;
@@ -166,7 +169,7 @@
                         justify-content: center;
                         list-style: none;
                         text-transform: uppercase;
-                        .menu-item {
+                        >.menu-item {
                             padding: 10px 14px;
                             border-radius: 5px;
                             -webkit-transition: all 0.3s;
@@ -180,6 +183,11 @@
                                     color: white;
                                 }
                             }
+                            &:hover {
+                                .sub-menu {
+                                    top: 100%;
+                                }
+                            }
                             a {
                                 color: $text-color;
                                 text-decoration: none;
@@ -187,6 +195,25 @@
                                 font-size: 14px;
                                 -webkit-transition: all 0.3s;
                                 transition: all 0.3s;
+                            }
+                            .sub-menu {
+                                transition: 0.3s all;
+                                position: absolute;
+                                background-color: #fff;
+                                top: -200%;
+                                width: 100%;
+                                left: 0;
+                                padding: 30px 14px;
+                                display: flex;
+                                li {
+                                    list-style: none;
+                                    padding: 10px;
+                                    font-weight: bold;
+                                    a {
+                                        font-size: 30px;
+                                        color: #3f3f3f;
+                                    }
+                                }
                             }
                         }
                     }
