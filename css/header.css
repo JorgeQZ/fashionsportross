@@ -14,87 +14,6 @@ body {
   position: relative;
 }
 
-.main-header .contain-search-bar {
-  padding: 0px 20px;
-  position: absolute;
-  left: 0;
-  top: 100%;
-  height: 0;
-  background-color: #fff;
-  overflow: hidden;
-  width: 100%;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  z-index: 100;
-  border-top: 1px solid #de3252;
-}
-
-.main-header .contain-search-bar.act {
-  padding: 12px 20px;
-  height: auto;
-  top: 100%;
-}
-
-.main-header .contain-search-bar li {
-  list-style: none;
-}
-
-.main-header .contain-search-bar li h2 {
-  display: none;
-}
-
-.main-header .contain-search-bar li form,
-.main-header .contain-search-bar li form.woocommerce-product-search {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-.main-header .contain-search-bar li form input,
-.main-header .contain-search-bar li form .search-field,
-.main-header .contain-search-bar li form.woocommerce-product-search input,
-.main-header .contain-search-bar li form.woocommerce-product-search .search-field {
-  height: 34px;
-  padding: 10px;
-  font-size: 12px;
-  border: 1px solid #3f3f3f;
-  font-family: "Montserrat", serif;
-  border-radius: 2px;
-  width: calc(100% - 130px);
-}
-
-.main-header .contain-search-bar li form input[type="submit"],
-.main-header .contain-search-bar li form button,
-.main-header .contain-search-bar li form.woocommerce-product-search input[type="submit"],
-.main-header .contain-search-bar li form.woocommerce-product-search button {
-  height: 35px;
-  width: 90px;
-  border-radius: 2px;
-  text-align: center;
-  padding: 9px 10px !important;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background-color: #de3252;
-  color: white;
-  border: none;
-}
-
 .main-header .header-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -134,7 +53,7 @@ body {
   display: none;
 }
 
-.main-header .header-content .container-cuenta {
+.main-header .header-content .menu-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -144,8 +63,94 @@ body {
   z-index: 1;
 }
 
-.main-header .header-content .container-cuenta .contain-account {
+.main-header .header-content .menu-container .menu-cont > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  list-style: none;
+  text-transform: uppercase;
+}
+
+.main-header .header-content .menu-container .menu-cont > ul > .menu-item {
+  padding: 10px 14px;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  margin-right: 5px;
+}
+
+.main-header .header-content .menu-container .menu-cont > ul > .menu-item:hover, .main-header .header-content .menu-container .menu-cont > ul > .menu-item.current_page_item {
+  background-color: #de3252;
+  color: white;
+}
+
+.main-header .header-content .menu-container .menu-cont > ul > .menu-item:hover a, .main-header .header-content .menu-container .menu-cont > ul > .menu-item.current_page_item a {
+  color: white;
+}
+
+.main-header .header-content .menu-container .menu-cont > ul > .menu-item:hover .sub-menu {
+  top: 100%;
+}
+
+.main-header .header-content .menu-container .menu-cont > ul > .menu-item a {
+  color: #3f3f3f;
+  text-decoration: none;
+  font-style: normal;
+  font-size: 14px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.main-header .header-content .menu-container .menu-cont > ul > .menu-item .sub-menu {
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
   position: absolute;
+  background-color: #fff;
+  top: -200%;
+  width: 100%;
+  left: 0;
+  padding: 30px 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-header .header-content .menu-container .menu-cont > ul > .menu-item .sub-menu li {
+  list-style: none;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.main-header .header-content .menu-container .menu-cont > ul > .menu-item .sub-menu li a {
+  font-size: 30px;
+  color: #3f3f3f;
+}
+
+.main-header .header-content .menu-container .contain-search {
+  padding: 10px;
+  position: relative;
+  margin-right: 10px;
+}
+
+.main-header .header-content .menu-container .contain-search img {
+  width: 16px;
+}
+
+.main-header .header-content .container-cuenta {
+  position: absolute;
+  right: 40px;
+  top: 100%;
+}
+
+.main-header .header-content .container-cuenta .contain-account {
   text-transform: uppercase;
   top: calc(100%);
   z-index: 10;
@@ -179,93 +184,115 @@ body {
   padding: 0px 3px;
 }
 
-.main-header .header-content .container-cuenta .menu-cont > ul {
+.contain-search-bar {
+  padding: 0px 20px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #fff;
+  overflow: hidden;
+  height: 0;
+  width: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  z-index: 100;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 0;
-  margin: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 0% 0% 0% 40%;
+}
+
+.contain-search-bar.act {
+  width: 100%;
+  height: 100vh;
+}
+
+.contain-search-bar li {
+  list-style: none;
+  width: 100%;
+}
+
+.contain-search-bar li h2 {
+  display: none;
+}
+
+.contain-search-bar li form,
+.contain-search-bar li form.woocommerce-product-search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  list-style: none;
-  text-transform: uppercase;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 70%;
+  margin: 0 auto;
 }
 
-.main-header .header-content .container-cuenta .menu-cont > ul > .menu-item {
-  padding: 10px 14px;
-  border-radius: 5px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  margin-right: 5px;
+.contain-search-bar li form input,
+.contain-search-bar li form .search-field,
+.contain-search-bar li form.woocommerce-product-search input,
+.contain-search-bar li form.woocommerce-product-search .search-field {
+  height: 54px;
+  padding: 10px;
+  font-size: 32px;
+  border: none;
+  font-family: "Montserrat", serif;
+  border-radius: 2px;
+  width: calc(100% - 140px);
+  position: relative;
 }
 
-.main-header .header-content .container-cuenta .menu-cont > ul > .menu-item:hover, .main-header .header-content .container-cuenta .menu-cont > ul > .menu-item.current_page_item {
-  background-color: #de3252;
-  color: white;
-}
-
-.main-header .header-content .container-cuenta .menu-cont > ul > .menu-item:hover a, .main-header .header-content .container-cuenta .menu-cont > ul > .menu-item.current_page_item a {
-  color: white;
-}
-
-.main-header .header-content .container-cuenta .menu-cont > ul > .menu-item:hover .sub-menu {
-  top: 100%;
-}
-
-.main-header .header-content .container-cuenta .menu-cont > ul > .menu-item a {
-  color: #3f3f3f;
-  text-decoration: none;
-  font-style: normal;
-  font-size: 14px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.main-header .header-content .container-cuenta .menu-cont > ul > .menu-item .sub-menu {
-  -webkit-transition: 0.3s all;
-  transition: 0.3s all;
+.contain-search-bar li form input:before,
+.contain-search-bar li form .search-field:before,
+.contain-search-bar li form.woocommerce-product-search input:before,
+.contain-search-bar li form.woocommerce-product-search .search-field:before {
   position: absolute;
-  background-color: #fff;
-  top: -200%;
-  width: 100%;
-  left: 0;
-  padding: 30px 14px;
+  left: -54px;
+  top: 0;
+  content: "";
+  width: 54px;
+  height: 54px;
+  background-image: url("../img/search.png");
+  background-size: cover;
+}
+
+.contain-search-bar li form input[type="submit"],
+.contain-search-bar li form button,
+.contain-search-bar li form.woocommerce-product-search input[type="submit"],
+.contain-search-bar li form.woocommerce-product-search button {
+  height: 55px;
+  width: 140px;
+  border-radius: 2px;
+  text-align: center;
+  padding: 9px 10px !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.main-header .header-content .container-cuenta .menu-cont > ul > .menu-item .sub-menu li {
-  list-style: none;
-  padding: 10px;
-  font-weight: bold;
-}
-
-.main-header .header-content .container-cuenta .menu-cont > ul > .menu-item .sub-menu li a {
-  font-size: 30px;
-  color: #3f3f3f;
-}
-
-.main-header .header-content .container-cuenta .contain-search {
-  padding: 10px;
-  position: relative;
-  margin-right: 10px;
-}
-
-.main-header .header-content .container-cuenta .contain-search img {
-  width: 16px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #de3252;
+  color: white;
+  border: none;
 }
 
 @media screen and (max-width: 880px) {
-  .main-header {
-    max-width: 100%;
-    position: relative;
-  }
-  .main-header .contain-search-bar {
+  .contain-search-bar {
     padding: 0px 20px;
     position: absolute;
     left: 10%;
@@ -279,19 +306,19 @@ body {
     z-index: 100;
     border-top: none;
   }
-  .main-header .contain-search-bar.act {
+  .contain-search-bar.act {
     padding: 8px 20px;
     height: auto;
     top: calc(100% + 1px);
   }
-  .main-header .contain-search-bar li {
+  .contain-search-bar li {
     list-style: none;
   }
-  .main-header .contain-search-bar li h2 {
+  .contain-search-bar li h2 {
     display: none;
   }
-  .main-header .contain-search-bar li form,
-  .main-header .contain-search-bar li form.woocommerce-product-search {
+  .contain-search-bar li form,
+  .contain-search-bar li form.woocommerce-product-search {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -302,10 +329,10 @@ body {
     -ms-flex-pack: justify;
     justify-content: space-between;
   }
-  .main-header .contain-search-bar li form input,
-  .main-header .contain-search-bar li form .search-field,
-  .main-header .contain-search-bar li form.woocommerce-product-search input,
-  .main-header .contain-search-bar li form.woocommerce-product-search .search-field {
+  .contain-search-bar li form input,
+  .contain-search-bar li form .search-field,
+  .contain-search-bar li form.woocommerce-product-search input,
+  .contain-search-bar li form.woocommerce-product-search .search-field {
     height: 34px;
     padding: 10px;
     font-size: 12px;
@@ -314,10 +341,10 @@ body {
     border-radius: 2px;
     width: calc(100% - 100px);
   }
-  .main-header .contain-search-bar li form input[type="submit"],
-  .main-header .contain-search-bar li form button,
-  .main-header .contain-search-bar li form.woocommerce-product-search input[type="submit"],
-  .main-header .contain-search-bar li form.woocommerce-product-search button {
+  .contain-search-bar li form input[type="submit"],
+  .contain-search-bar li form button,
+  .contain-search-bar li form.woocommerce-product-search input[type="submit"],
+  .contain-search-bar li form.woocommerce-product-search button {
     height: 35px;
     width: 90px;
     border-radius: 2px;
@@ -338,6 +365,10 @@ body {
     background-color: #de3252;
     color: white;
     border: none;
+  }
+  .main-header {
+    max-width: 100%;
+    position: relative;
   }
   .main-header .header-content .mobile-button {
     cursor: pointer;
