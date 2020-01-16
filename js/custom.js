@@ -1,8 +1,9 @@
 jQuery(document).ready(function(e) {
     jQuery('#mobile-button').click(function(e) {
         e.preventDefault();
-        jQuery('#container-id').toggleClass('act');
-        jQuery('.contain-search-bar').removeClass('act');
+        jQuery('.menu-container').toggleClass('act');
+        jQuery('.container-cuenta ').toggleClass('act');
+        // jQuery('.contain-search-bar').removeClass('act');
     });
 
     jQuery('#search-button').click(function(e) {
@@ -22,6 +23,11 @@ jQuery(document).ready(function(e) {
         e.preventDefault();
         jQuery('html,body').animate({ scrollTop: 0 }, 500);
 
+    });
+
+    jQuery('.close-button').click(function(e) {
+        e.preventDefault();
+        jQuery('.contain-search-bar').removeClass('act');
     });
 
 });
