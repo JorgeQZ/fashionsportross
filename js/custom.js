@@ -30,4 +30,12 @@ jQuery(document).ready(function(e) {
         jQuery('.contain-search-bar').removeClass('act');
     });
 
+    $('.menu > li ').mouseenter(function() {
+        $(this).find('.sub-menu').addClass('act');
+    });
+
+    $('.sub-menu').mouseleave(function() {
+        $(this).removeClass('act');
+    });
+
 });

@@ -47,7 +47,7 @@ dynamic_sidebar( 'Buscador' );
                 'menu_id'              => "main_menu",
                 'container'         => "div",
                 'container_class'   => "menu-cont",
-                'depth'             => "2",
+                'depth'             => "3",
                 ));
             ?>
             </div>
